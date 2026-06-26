@@ -42,25 +42,33 @@ function Index() {
           <div className="absolute top-20 -right-32 h-[420px] w-[420px] rounded-full opacity-20 blur-3xl" style={{ background: "var(--orange-brand)" }} />
         </div>
 
-        <div className="mx-auto max-w-6xl px-6 pb-24 pt-16 md:pt-24">
-          <div className="mx-auto max-w-3xl text-center">
-            <span className="inline-flex items-center gap-2 rounded-full border border-border bg-card/60 px-3 py-1 text-xs font-medium text-muted-foreground backdrop-blur">
+        <div className="mx-auto max-w-6xl px-6 pb-24 pt-12 md:pt-20">
+          <div className="mx-auto flex max-w-3xl flex-col items-center text-center">
+            <img
+              src={logoAsset.url}
+              alt="Logo de Sfiner"
+              className="mb-6 h-28 w-28 object-contain drop-shadow-[0_10px_30px_rgba(120,40,180,0.25)] md:h-36 md:w-36"
+            />
+            <h1 className="font-display text-7xl font-semibold leading-none tracking-tight md:text-9xl">
+              <span className="text-gradient-brand">Sfiner</span>
+            </h1>
+            <span className="mt-6 inline-flex items-center gap-2 rounded-full border border-border bg-card/60 px-3 py-1 text-xs font-medium text-muted-foreground backdrop-blur">
               <Sparkles className="h-3.5 w-3.5" /> Growth Partner para ecommerce
             </span>
-            <h1 className="mt-6 font-display text-5xl font-semibold leading-[1.05] md:text-7xl">
-              Escalamos tu marca <br />
-              <span className="text-gradient-brand">con estrategia y alma.</span>
-            </h1>
+            <h2 className="mt-6 font-display text-3xl font-semibold leading-[1.1] md:text-5xl">
+              En un océano de marcas, <br />
+              <span className="text-gradient-brand">nadan los tiburones.</span>
+            </h2>
             <p className="mx-auto mt-6 max-w-xl text-lg text-muted-foreground md:text-xl">
-              Somos el equipo que acompaña a marcas ecommerce a multiplicar sus ventas
-              y construir una imagen de marca consolidada, premium y reconocible.
+              Convertimos marcas ecommerce en depredadores de su categoría:
+              más ventas, más marca, más mordida en cada lanzamiento.
             </p>
             <div className="mt-10 flex flex-col items-center justify-center gap-3 sm:flex-row">
               <a
                 href="#contacto"
                 className="inline-flex items-center gap-2 rounded-full bg-gradient-brand px-6 py-3 text-sm font-medium text-white shadow-elegant transition-transform hover:scale-[1.02]"
               >
-                Empezar a crecer <ArrowUpRight className="h-4 w-4" />
+                Empezar a cazar <ArrowUpRight className="h-4 w-4" />
               </a>
               <a
                 href="#servicios"
