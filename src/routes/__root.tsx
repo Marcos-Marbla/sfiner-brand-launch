@@ -8,6 +8,7 @@ import {
   Scripts,
 } from "@tanstack/react-router";
 import { useEffect, type ReactNode } from "react";
+import { SpeedInsights } from "@vercel/speed-insights/react";
 
 import appCss from "../styles.css?url";
 import faviconAsset from "../assets/favicon.png.asset.json";
@@ -79,10 +80,18 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
       { charSet: "utf-8" },
       { name: "viewport", content: "width=device-width, initial-scale=1" },
       { title: "Sfiner — Growth Partner para marcas ecommerce" },
-      { name: "description", content: "Sfiner es el growth partner que ayuda a marcas ecommerce a escalar sus ventas y consolidar una imagen de marca premium." },
+      {
+        name: "description",
+        content:
+          "Sfiner es el growth partner que ayuda a marcas ecommerce a escalar sus ventas y consolidar una imagen de marca premium.",
+      },
       { name: "author", content: "Sfiner" },
       { property: "og:title", content: "Sfiner — Growth Partner para marcas ecommerce" },
-      { property: "og:description", content: "Escalamos marcas ecommerce y construimos una imagen de marca sólida y consolidada." },
+      {
+        property: "og:description",
+        content:
+          "Escalamos marcas ecommerce y construimos una imagen de marca sólida y consolidada.",
+      },
       { property: "og:type", content: "website" },
       { name: "twitter:card", content: "summary" },
     ],
@@ -90,7 +99,10 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
       { rel: "icon", type: "image/png", href: faviconAsset.url },
       { rel: "preconnect", href: "https://fonts.googleapis.com" },
       { rel: "preconnect", href: "https://fonts.gstatic.com", crossOrigin: "anonymous" },
-      { rel: "stylesheet", href: "https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,500;9..144,600;9..144,700&family=Inter:wght@400;500;600&display=swap" },
+      {
+        rel: "stylesheet",
+        href: "https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,500;9..144,600;9..144,700&family=Inter:wght@400;500;600&display=swap",
+      },
       { rel: "stylesheet", href: appCss },
     ],
   }),
@@ -109,6 +121,7 @@ function RootShell({ children }: { children: ReactNode }) {
       <body>
         {children}
         <Scripts />
+        <SpeedInsights />
       </body>
     </html>
   );

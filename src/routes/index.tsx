@@ -5,9 +5,16 @@ export const Route = createFileRoute("/")({
   head: () => ({
     meta: [
       { title: "Sfiner — Growth Partner para marcas ecommerce" },
-      { name: "description", content: "Sfiner es el growth partner que ayuda a marcas ecommerce a escalar sus ventas y construir una imagen de marca consolidada." },
+      {
+        name: "description",
+        content:
+          "Sfiner es el growth partner que ayuda a marcas ecommerce a escalar sus ventas y construir una imagen de marca consolidada.",
+      },
       { property: "og:title", content: "Sfiner — Growth Partner para marcas ecommerce" },
-      { property: "og:description", content: "Escalamos marcas ecommerce y consolidamos su imagen de marca." },
+      {
+        property: "og:description",
+        content: "Escalamos marcas ecommerce y consolidamos su imagen de marca.",
+      },
     ],
   }),
   component: Index,
@@ -22,9 +29,15 @@ function Index() {
           <span className="text-gradient-brand">sfiner</span>
         </a>
         <nav className="hidden gap-8 text-sm text-muted-foreground md:flex">
-          <a href="#servicios" className="transition-colors hover:text-foreground">Servicios</a>
-          <a href="#metodo" className="transition-colors hover:text-foreground">Método</a>
-          <a href="#contacto" className="transition-colors hover:text-foreground">Contacto</a>
+          <a href="#servicios" className="transition-colors hover:text-foreground">
+            Servicios
+          </a>
+          <a href="#metodo" className="transition-colors hover:text-foreground">
+            Método
+          </a>
+          <a href="#contacto" className="transition-colors hover:text-foreground">
+            Contacto
+          </a>
         </nav>
         <a
           href="#contacto"
@@ -37,8 +50,14 @@ function Index() {
       {/* Hero */}
       <section id="top" className="relative overflow-hidden">
         <div className="pointer-events-none absolute inset-0 -z-10">
-          <div className="absolute -top-40 -left-32 h-[480px] w-[480px] rounded-full opacity-30 blur-3xl" style={{ background: "var(--gradient-brand)" }} />
-          <div className="absolute top-20 -right-32 h-[420px] w-[420px] rounded-full opacity-20 blur-3xl" style={{ background: "var(--orange-brand)" }} />
+          <div
+            className="absolute -top-40 -left-32 h-[480px] w-[480px] rounded-full opacity-30 blur-3xl"
+            style={{ background: "var(--gradient-brand)" }}
+          />
+          <div
+            className="absolute top-20 -right-32 h-[420px] w-[420px] rounded-full opacity-20 blur-3xl"
+            style={{ background: "var(--orange-brand)" }}
+          />
         </div>
 
         <div className="mx-auto max-w-6xl px-6 pb-24 pt-16 md:pt-24">
@@ -51,8 +70,8 @@ function Index() {
               <span className="text-gradient-brand">con estrategia y alma.</span>
             </h1>
             <p className="mx-auto mt-6 max-w-xl text-lg text-muted-foreground md:text-xl">
-              Somos el equipo que acompaña a marcas ecommerce a multiplicar sus ventas
-              y construir una imagen de marca consolidada, premium y reconocible.
+              Somos el equipo que acompaña a marcas ecommerce a multiplicar sus ventas y construir
+              una imagen de marca consolidada, premium y reconocible.
             </p>
             <div className="mt-10 flex flex-col items-center justify-center gap-3 sm:flex-row">
               <a
@@ -74,9 +93,12 @@ function Index() {
 
       <section id="servicios" className="mx-auto max-w-6xl px-6 pb-24">
         <div className="mb-14 max-w-2xl">
-          <span className="text-xs font-medium uppercase tracking-widest text-muted-foreground">Servicios</span>
+          <span className="text-xs font-medium uppercase tracking-widest text-muted-foreground">
+            Servicios
+          </span>
           <h2 className="mt-3 font-display text-4xl font-semibold md:text-5xl">
-            Todo lo que tu marca necesita para <span className="text-gradient-brand">escalar de verdad.</span>
+            Todo lo que tu marca necesita para{" "}
+            <span className="text-gradient-brand">escalar de verdad.</span>
           </h2>
         </div>
 
@@ -98,7 +120,10 @@ function Index() {
               desc: "Optimizamos tu tienda, embudos y comunicación para convertir cada visita en una oportunidad de marca.",
             },
           ].map((s) => (
-            <article key={s.title} className="group rounded-3xl border border-border bg-card p-8 shadow-soft transition-all hover:-translate-y-1 hover:shadow-elegant">
+            <article
+              key={s.title}
+              className="group rounded-3xl border border-border bg-card p-8 shadow-soft transition-all hover:-translate-y-1 hover:shadow-elegant"
+            >
               <div className="mb-6 inline-flex h-12 w-12 items-center justify-center rounded-2xl bg-gradient-brand text-white">
                 <s.icon className="h-5 w-5" />
               </div>
@@ -114,21 +139,39 @@ function Index() {
         <div className="rounded-[2rem] border border-border bg-card p-10 shadow-soft md:p-16">
           <div className="grid gap-12 md:grid-cols-2">
             <div>
-              <span className="text-xs font-medium uppercase tracking-widest text-muted-foreground">Nuestro método</span>
+              <span className="text-xs font-medium uppercase tracking-widest text-muted-foreground">
+                Nuestro método
+              </span>
               <h2 className="mt-3 font-display text-4xl font-semibold md:text-5xl">
                 No somos una agencia. <span className="text-gradient-brand">Somos tu partner.</span>
               </h2>
               <p className="mt-6 text-muted-foreground">
-                Nos integramos en tu equipo, entendemos tu marca y tomamos decisiones contigo.
-                Cada cliente recibe foco, estrategia y ejecución como si fuera nuestro propio negocio.
+                Nos integramos en tu equipo, entendemos tu marca y tomamos decisiones contigo. Cada
+                cliente recibe foco, estrategia y ejecución como si fuera nuestro propio negocio.
               </p>
             </div>
             <ol className="space-y-6">
               {[
-                { n: "01", t: "Diagnóstico", d: "Analizamos tu marca, datos y posicionamiento para detectar oportunidades reales." },
-                { n: "02", t: "Estrategia", d: "Diseñamos un plan a medida con objetivos claros y un roadmap accionable." },
-                { n: "03", t: "Ejecución", d: "Activamos campañas, branding y CRO con un equipo dedicado a tu cuenta." },
-                { n: "04", t: "Escala", d: "Iteramos, optimizamos y escalamos lo que funciona, mes a mes." },
+                {
+                  n: "01",
+                  t: "Diagnóstico",
+                  d: "Analizamos tu marca, datos y posicionamiento para detectar oportunidades reales.",
+                },
+                {
+                  n: "02",
+                  t: "Estrategia",
+                  d: "Diseñamos un plan a medida con objetivos claros y un roadmap accionable.",
+                },
+                {
+                  n: "03",
+                  t: "Ejecución",
+                  d: "Activamos campañas, branding y CRO con un equipo dedicado a tu cuenta.",
+                },
+                {
+                  n: "04",
+                  t: "Escala",
+                  d: "Iteramos, optimizamos y escalamos lo que funciona, mes a mes.",
+                },
               ].map((step) => (
                 <li key={step.n} className="flex gap-5 border-b border-border pb-5 last:border-0">
                   <span className="font-display text-2xl text-gradient-brand">{step.n}</span>
@@ -146,13 +189,22 @@ function Index() {
       {/* Contacto */}
       <section id="contacto" className="mx-auto max-w-6xl px-6 pb-24">
         <div className="relative overflow-hidden rounded-[2rem] border border-border bg-card p-10 text-center shadow-elegant md:p-20">
-          <div className="pointer-events-none absolute inset-0 -z-10 opacity-40" style={{ background: "radial-gradient(circle at 50% 0%, color-mix(in oklab, var(--purple-brand) 30%, transparent), transparent 60%)" }} />
-          <span className="text-xs font-medium uppercase tracking-widest text-muted-foreground">Contacto</span>
+          <div
+            className="pointer-events-none absolute inset-0 -z-10 opacity-40"
+            style={{
+              background:
+                "radial-gradient(circle at 50% 0%, color-mix(in oklab, var(--purple-brand) 30%, transparent), transparent 60%)",
+            }}
+          />
+          <span className="text-xs font-medium uppercase tracking-widest text-muted-foreground">
+            Contacto
+          </span>
           <h2 className="mx-auto mt-4 max-w-2xl font-display text-4xl font-semibold leading-tight md:text-6xl">
             ¿Listo para <span className="text-gradient-brand">escalar tu marca</span>?
           </h2>
           <p className="mx-auto mt-5 max-w-lg text-muted-foreground">
-            Cuéntanos sobre tu proyecto. Te responderemos en menos de 24h con una primera lectura de tu marca.
+            Cuéntanos sobre tu proyecto. Te responderemos en menos de 24h con una primera lectura de
+            tu marca.
           </p>
 
           <a
@@ -172,7 +224,10 @@ function Index() {
             <span className="text-gradient-brand">sfiner</span>
           </div>
           <p>© {new Date().getFullYear()} Sfiner. Growth partner para marcas ecommerce.</p>
-          <a href="mailto:marcos.marbla@sfiner.com" className="transition-colors hover:text-foreground">
+          <a
+            href="mailto:marcos.marbla@sfiner.com"
+            className="transition-colors hover:text-foreground"
+          >
             marcos.marbla@sfiner.com
           </a>
         </div>
