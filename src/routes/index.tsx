@@ -72,24 +72,6 @@ function Index() {
         </div>
       </section>
 
-      {/* Stats */}
-      <section className="mx-auto max-w-6xl px-6 pb-24">
-        <div className="grid grid-cols-2 gap-px overflow-hidden rounded-3xl border border-border bg-border md:grid-cols-4">
-          {[
-            { k: "+3.4x", v: "ROAS medio" },
-            { k: "+180%", v: "crecimiento anual" },
-            { k: "25+", v: "marcas escaladas" },
-            { k: "100%", v: "enfoque DTC" },
-          ].map((s) => (
-            <div key={s.v} className="bg-card p-8 text-center">
-              <div className="font-display text-3xl font-semibold text-gradient-brand md:text-4xl">{s.k}</div>
-              <div className="mt-2 text-sm text-muted-foreground">{s.v}</div>
-            </div>
-          ))}
-        </div>
-      </section>
-
-      {/* Servicios */}
       <section id="servicios" className="mx-auto max-w-6xl px-6 pb-24">
         <div className="mb-14 max-w-2xl">
           <span className="text-xs font-medium uppercase tracking-widest text-muted-foreground">Servicios</span>
