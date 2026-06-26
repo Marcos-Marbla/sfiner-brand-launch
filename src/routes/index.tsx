@@ -1,5 +1,6 @@
 import { createFileRoute } from "@tanstack/react-router";
 import { ArrowUpRight, Mail, Sparkles, TrendingUp, Layers, Target } from "lucide-react";
+import logoAsset from "../assets/favicon.png.asset.json";
 
 export const Route = createFileRoute("/")({
   head: () => ({
