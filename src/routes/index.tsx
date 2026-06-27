@@ -136,13 +136,14 @@ const translations = {
 } as const;
 
 function Index() {
-  const [lang, setLang] = useState<Lang>("es");
+  const search = Route.useSearch();
+  const navigate = Route.useNavigate();
+  const lang: Lang = search.lang === "en" ? "en" : "es";
   const [open, setOpen] = useState(false);
 
-  useEffect(() => {
-    const stored = (typeof window !== "undefined" && (localStorage.getItem("sfiner-lang") as Lang | null)) || null;
-    if (stored === "es" || stored === "en") setLang(stored);
-  }, []);
+  const changeLang = (l: Lang) => {
+    navigate({ search: l === "en" ? { lang: "en" } : {}, replace: true });
+  };
 
   useEffect(() => {
     if (typeof window !== "undefined") {
@@ -150,6 +151,14 @@ function Index() {
       document.documentElement.lang = lang;
     }
   }, [lang]);
+
+  // Restore language from localStorage only when no URL param is present
+  useEffect(() => {
+    if (search.lang) return;
+    if (typeof window === "undefined") return;
+    const stored = localStorage.getItem("sfiner-lang");
+    if (stored === "en") navigate({ search: { lang: "en" }, replace: true });
+  }, []);
 
   useEffect(() => {
     if (!open) return;
