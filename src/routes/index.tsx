@@ -192,7 +192,7 @@ function Index() {
                 type="button"
                 role="option"
                 aria-selected={lang === l}
-                onClick={() => { setLang(l); setOpen(false); }}
+                onClick={() => { changeLang(l); setOpen(false); }}
                 className="flex w-full items-center justify-between px-3 py-2 text-sm hover:bg-secondary"
               >
                 <span>{l === "es" ? "Español" : "English"}</span>
