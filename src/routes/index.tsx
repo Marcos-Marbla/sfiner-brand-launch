@@ -1,17 +1,48 @@
 import { createFileRoute } from "@tanstack/react-router";
 import { ArrowUpRight, Mail, Sparkles, TrendingUp, Layers, Target, Globe, Check } from "lucide-react";
 import { useEffect, useState } from "react";
+import { z } from "zod";
 import logoAsset from "../assets/favicon.png.asset.json";
 
+const SEO = {
+  es: {
+    title: "Sfiner — Growth Partner para marcas ecommerce",
+    description: "Sfiner es el growth partner que ayuda a marcas ecommerce a escalar ventas y construir una imagen de marca consolidada. Performance, branding y CRO.",
+    ogTitle: "Sfiner — Growth Partner para marcas ecommerce",
+    ogDescription: "Escalamos marcas ecommerce y consolidamos su imagen de marca.",
+  },
+  en: {
+    title: "Sfiner — Growth Partner for ecommerce brands",
+    description: "Sfiner is the growth partner helping ecommerce brands scale sales and build a consolidated brand image. Performance, branding and CRO.",
+    ogTitle: "Sfiner — Growth Partner for ecommerce brands",
+    ogDescription: "We scale ecommerce brands and consolidate their brand image.",
+  },
+} as const;
+
 export const Route = createFileRoute("/")({
-  head: () => ({
-    meta: [
-      { title: "Sfiner — The fin behind your momentum" },
-      { name: "description", content: "Sfiner es el growth partner que ayuda a marcas ecommerce a escalar sus ventas y construir una imagen de marca consolidada." },
-      { property: "og:title", content: "Sfiner — The fin behind your momentum" },
-      { property: "og:description", content: "Escalamos marcas ecommerce y consolidamos su imagen de marca." },
-    ],
+  validateSearch: z.object({
+    lang: z.enum(["es", "en"]).optional(),
   }),
+  head: ({ match }) => {
+    const lang = (match.search as { lang?: "es" | "en" }).lang === "en" ? "en" : "es";
+    const seo = SEO[lang];
+    return {
+      meta: [
+        { title: seo.title },
+        { name: "description", content: seo.description },
+        { property: "og:title", content: seo.ogTitle },
+        { property: "og:description", content: seo.ogDescription },
+        { property: "og:locale", content: lang === "en" ? "en_US" : "es_ES" },
+        { property: "og:url", content: lang === "en" ? "/?lang=en" : "/" },
+      ],
+      links: [
+        { rel: "canonical", href: lang === "en" ? "/?lang=en" : "/" },
+        { rel: "alternate", hrefLang: "es", href: "/" },
+        { rel: "alternate", hrefLang: "en", href: "/?lang=en" },
+        { rel: "alternate", hrefLang: "x-default", href: "/" },
+      ],
+    };
+  },
   component: Index,
 });
 
@@ -105,13 +136,14 @@ const translations = {
 } as const;
 
 function Index() {
-  const [lang, setLang] = useState<Lang>("es");
+  const search = Route.useSearch();
+  const navigate = Route.useNavigate();
+  const lang: Lang = search.lang === "en" ? "en" : "es";
   const [open, setOpen] = useState(false);
 
-  useEffect(() => {
-    const stored = (typeof window !== "undefined" && (localStorage.getItem("sfiner-lang") as Lang | null)) || null;
-    if (stored === "es" || stored === "en") setLang(stored);
-  }, []);
+  const changeLang = (l: Lang) => {
+    navigate({ search: l === "en" ? { lang: "en" } : {}, replace: true });
+  };
 
   useEffect(() => {
     if (typeof window !== "undefined") {
@@ -119,6 +151,14 @@ function Index() {
       document.documentElement.lang = lang;
     }
   }, [lang]);
+
+  // Restore language from localStorage only when no URL param is present
+  useEffect(() => {
+    if (search.lang) return;
+    if (typeof window === "undefined") return;
+    const stored = localStorage.getItem("sfiner-lang");
+    if (stored === "en") navigate({ search: { lang: "en" }, replace: true });
+  }, []);
 
   useEffect(() => {
     if (!open) return;
@@ -152,7 +192,7 @@ function Index() {
                 type="button"
                 role="option"
                 aria-selected={lang === l}
-                onClick={() => { setLang(l); setOpen(false); }}
+                onClick={() => { changeLang(l); setOpen(false); }}
                 className="flex w-full items-center justify-between px-3 py-2 text-sm hover:bg-secondary"
               >
                 <span>{l === "es" ? "Español" : "English"}</span>
