@@ -2,7 +2,7 @@ import { createFileRoute } from "@tanstack/react-router";
 import { ArrowUpRight, Mail, Sparkles, TrendingUp, Layers, Target, Globe, Check, Code2, Workflow, PhoneCall } from "lucide-react";
 import { useEffect, useState } from "react";
 import { z } from "zod";
-import logoAsset from "../assets/favicon.png.asset.json";
+import logoMark from "../assets/logo-mark.png";
 import bgHero from "../assets/bg-hero.jpg";
 import bgServices from "../assets/bg-services.jpg";
 import bgMethod from "../assets/bg-method.jpg";
