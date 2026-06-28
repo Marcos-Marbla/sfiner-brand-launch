@@ -110,10 +110,14 @@ const translations = {
       kicker: "Services",
       title1: "Everything your brand needs to",
       title2: "truly scale.",
+      intro: "We're your growth partner: we combine brand strategy and performance with technology — custom websites, automations and AI call assistants — so your business scales without friction.",
       items: [
+        { title: "Growth Partner", desc: "End-to-end strategy and execution to scale your ecommerce brand. Focused on profitability, brand and sustained growth." },
         { title: "Performance Marketing", desc: "Meta, TikTok and Google campaigns designed to scale with real profitability — not vanity metrics." },
         { title: "Branding & Identity", desc: "We build the consolidated image that sets your brand apart and positions it as the reference in its category." },
-        { title: "CRO & Strategy", desc: "We optimize your store, funnels and messaging to turn every visit into a brand opportunity." },
+        { title: "Web Design & CRO", desc: "We design and build fast, elegant websites optimized to turn every visit into a brand opportunity." },
+        { title: "Service Automation", desc: "We connect your tools and automate commercial, ops and marketing processes so your team scales without new hires." },
+        { title: "AI Call Assistants", desc: "We deploy AI voice assistants that answer, qualify and book 24/7 with your brand's voice and tone." },
       ],
     },
     method: {
