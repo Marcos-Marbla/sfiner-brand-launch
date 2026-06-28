@@ -1,5 +1,5 @@
 import { createFileRoute } from "@tanstack/react-router";
-import { ArrowUpRight, Mail, Sparkles, TrendingUp, Layers, Target, Globe, Check } from "lucide-react";
+import { ArrowUpRight, Mail, Sparkles, TrendingUp, Layers, Target, Globe, Check, Code2, Workflow, PhoneCall } from "lucide-react";
 import { useEffect, useState } from "react";
 import { z } from "zod";
 import logoAsset from "../assets/favicon.png.asset.json";
@@ -64,10 +64,14 @@ const translations = {
       kicker: "Servicios",
       title1: "Todo lo que tu marca necesita para",
       title2: "escalar de verdad.",
+      intro: "Somos tu growth partner: combinamos estrategia de marca y performance con tecnología — webs a medida, automatizaciones y asistentes de llamadas con IA — para que tu negocio escale sin fricción.",
       items: [
+        { title: "Growth Partner", desc: "Estrategia y ejecución end-to-end para escalar tu marca ecommerce. Foco en rentabilidad, marca y crecimiento sostenido." },
         { title: "Performance Marketing", desc: "Campañas en Meta, TikTok y Google diseñadas para escalar con rentabilidad real, no vanity metrics." },
         { title: "Branding & Identidad", desc: "Construimos la imagen consolidada que diferencia tu marca y la posiciona como referente de su categoría." },
-        { title: "CRO & Estrategia", desc: "Optimizamos tu tienda, embudos y comunicación para convertir cada visita en una oportunidad de marca." },
+        { title: "Diseño Web & CRO", desc: "Diseñamos y desarrollamos webs rápidas, elegantes y optimizadas para convertir cada visita en una oportunidad de marca." },
+        { title: "Automatización de Servicios", desc: "Conectamos tus herramientas y automatizamos procesos comerciales, operativos y de marketing para que tu equipo escale sin contratar más." },
+        { title: "Asistentes de Llamadas IA", desc: "Implementamos asistentes de voz con IA que atienden, cualifican y agendan 24/7 con la voz y el tono de tu marca." },
       ],
     },
     method: {
@@ -106,10 +110,14 @@ const translations = {
       kicker: "Services",
       title1: "Everything your brand needs to",
       title2: "truly scale.",
+      intro: "We're your growth partner: we combine brand strategy and performance with technology — custom websites, automations and AI call assistants — so your business scales without friction.",
       items: [
+        { title: "Growth Partner", desc: "End-to-end strategy and execution to scale your ecommerce brand. Focused on profitability, brand and sustained growth." },
         { title: "Performance Marketing", desc: "Meta, TikTok and Google campaigns designed to scale with real profitability — not vanity metrics." },
         { title: "Branding & Identity", desc: "We build the consolidated image that sets your brand apart and positions it as the reference in its category." },
-        { title: "CRO & Strategy", desc: "We optimize your store, funnels and messaging to turn every visit into a brand opportunity." },
+        { title: "Web Design & CRO", desc: "We design and build fast, elegant websites optimized to turn every visit into a brand opportunity." },
+        { title: "Service Automation", desc: "We connect your tools and automate commercial, ops and marketing processes so your team scales without new hires." },
+        { title: "AI Call Assistants", desc: "We deploy AI voice assistants that answer, qualify and book 24/7 with your brand's voice and tone." },
       ],
     },
     method: {
@@ -282,11 +290,12 @@ function Index() {
           <h2 className="mt-3 font-display text-4xl font-semibold md:text-5xl">
             {t.services.title1} <span className="text-gradient-brand">{t.services.title2}</span>
           </h2>
+          <p className="mt-5 text-muted-foreground">{t.services.intro}</p>
         </div>
 
-        <div className="grid gap-6 md:grid-cols-3">
+        <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-3">
           {t.services.items.map((s, i) => {
-            const Icon = [TrendingUp, Layers, Target][i];
+            const Icon = [Sparkles, TrendingUp, Layers, Code2, Workflow, PhoneCall][i] ?? Target;
             return (
               <article key={s.title} className="group rounded-3xl border border-border bg-card p-8 shadow-soft transition-all hover:-translate-y-1 hover:shadow-elegant">
                 <div className="mb-6 inline-flex h-12 w-12 items-center justify-center rounded-2xl bg-gradient-brand text-white">
