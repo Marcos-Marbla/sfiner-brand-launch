@@ -3,6 +3,10 @@ import { ArrowUpRight, Mail, Sparkles, TrendingUp, Layers, Target, Globe, Check,
 import { useEffect, useState } from "react";
 import { z } from "zod";
 import logoAsset from "../assets/favicon.png.asset.json";
+import bgHero from "../assets/bg-hero.jpg";
+import bgServices from "../assets/bg-services.jpg";
+import bgMethod from "../assets/bg-method.jpg";
+import bgContact from "../assets/bg-contact.jpg";
 
 const SEO = {
   es: {
@@ -238,9 +242,16 @@ function Index() {
 
       {/* Hero */}
       <section id="top" className="relative overflow-hidden">
+        {/* Background image */}
         <div className="pointer-events-none absolute inset-0 -z-10">
-          <div className="absolute -top-40 -left-32 h-[480px] w-[480px] rounded-full opacity-30 blur-3xl" style={{ background: "var(--gradient-brand)" }} />
-          <div className="absolute top-20 -right-32 h-[420px] w-[420px] rounded-full opacity-20 blur-3xl" style={{ background: "var(--orange-brand)" }} />
+          <img
+            src={bgHero}
+            alt=""
+            aria-hidden
+            className="h-full w-full object-cover"
+          />
+          {/* Soft beige veil for elegance + readability */}
+          <div className="absolute inset-0" style={{ background: "linear-gradient(180deg, color-mix(in oklab, var(--beige) 78%, transparent) 0%, color-mix(in oklab, var(--beige) 92%, transparent) 60%, var(--beige) 100%)" }} />
         </div>
 
         <div className="mx-auto max-w-6xl px-6 pb-24 pt-12 md:pt-20">
@@ -248,6 +259,7 @@ function Index() {
             <img
               src={logoAsset.url}
               alt="Logo de Sfiner"
+              style={{ mixBlendMode: "multiply" }}
               className="mb-6 h-28 w-28 object-contain drop-shadow-[0_10px_30px_rgba(120,40,180,0.25)] md:h-36 md:w-36"
             />
             <h1 className="font-display text-7xl font-semibold leading-none tracking-tight md:text-9xl">
@@ -256,7 +268,7 @@ function Index() {
             <p className="mt-4 font-display text-lg italic text-muted-foreground md:text-xl">
               {t.hero.tagline}
             </p>
-            <span className="mt-6 inline-flex items-center gap-2 rounded-full border border-border bg-card/60 px-3 py-1 text-xs font-medium text-muted-foreground backdrop-blur">
+            <span className="mt-6 inline-flex items-center gap-2 rounded-full border border-border bg-card/70 px-3 py-1 text-xs font-medium text-muted-foreground backdrop-blur">
               <Sparkles className="h-3.5 w-3.5" /> {t.hero.badge}
             </span>
             <h2 className="mt-6 font-display text-3xl font-semibold leading-[1.1] md:text-5xl">
@@ -275,7 +287,7 @@ function Index() {
               </a>
               <a
                 href="#servicios"
-                className="inline-flex items-center gap-2 rounded-full border border-border bg-card px-6 py-3 text-sm font-medium text-foreground transition-colors hover:bg-secondary"
+                className="inline-flex items-center gap-2 rounded-full border border-border bg-card/80 px-6 py-3 text-sm font-medium text-foreground backdrop-blur transition-colors hover:bg-secondary"
               >
                 {t.hero.ctaSecondary}
               </a>
@@ -284,83 +296,107 @@ function Index() {
         </div>
       </section>
 
-      <section id="servicios" className="mx-auto max-w-6xl px-6 pb-24">
-        <div className="mb-14 max-w-2xl">
-          <span className="text-xs font-medium uppercase tracking-widest text-muted-foreground">{t.services.kicker}</span>
-          <h2 className="mt-3 font-display text-4xl font-semibold md:text-5xl">
-            {t.services.title1} <span className="text-gradient-brand">{t.services.title2}</span>
-          </h2>
-          <p className="mt-5 text-muted-foreground">{t.services.intro}</p>
+      {/* Services — dark ocean section */}
+      <section id="servicios" className="relative overflow-hidden py-24 md:py-32">
+        <div className="pointer-events-none absolute inset-0 -z-10">
+          <img src={bgServices} alt="" aria-hidden loading="lazy" className="h-full w-full object-cover" />
+          <div className="absolute inset-0" style={{ background: "linear-gradient(180deg, rgba(10,5,30,0.92), rgba(20,10,50,0.86) 50%, rgba(10,5,30,0.95))" }} />
         </div>
 
-        <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-3">
-          {t.services.items.map((s, i) => {
-            const Icon = [Sparkles, TrendingUp, Layers, Code2, Workflow, PhoneCall][i] ?? Target;
-            return (
-              <article key={s.title} className="group rounded-3xl border border-border bg-card p-8 shadow-soft transition-all hover:-translate-y-1 hover:shadow-elegant">
-                <div className="mb-6 inline-flex h-12 w-12 items-center justify-center rounded-2xl bg-gradient-brand text-white">
-                  <Icon className="h-5 w-5" />
-                </div>
-                <h3 className="font-display text-xl font-semibold">{s.title}</h3>
-                <p className="mt-3 text-sm leading-relaxed text-muted-foreground">{s.desc}</p>
-              </article>
-            );
-          })}
-        </div>
-      </section>
+        <div className="mx-auto max-w-6xl px-6">
+          <div className="mb-14 max-w-2xl">
+            <span className="text-xs font-medium uppercase tracking-widest text-white/60">{t.services.kicker}</span>
+            <h2 className="mt-3 font-display text-4xl font-semibold text-white md:text-5xl">
+              {t.services.title1} <span className="text-gradient-brand">{t.services.title2}</span>
+            </h2>
+            <p className="mt-5 text-white/70">{t.services.intro}</p>
+          </div>
 
-      {/* Método */}
-      <section id="metodo" className="mx-auto max-w-6xl px-6 pb-28">
-        <div className="rounded-[2rem] border border-border bg-card p-10 shadow-soft md:p-16">
-          <div className="grid gap-12 md:grid-cols-2">
-            <div>
-              <span className="text-xs font-medium uppercase tracking-widest text-muted-foreground">{t.method.kicker}</span>
-              <h2 className="mt-3 font-display text-4xl font-semibold md:text-5xl">
-                {t.method.title1} <span className="text-gradient-brand">{t.method.title2}</span>
-              </h2>
-              <p className="mt-6 text-muted-foreground">
-                {t.method.desc}
-              </p>
-            </div>
-            <ol className="space-y-6">
-              {t.method.steps.map((step, i) => (
-                <li key={step.t} className="flex gap-5 border-b border-border pb-5 last:border-0">
-                  <span className="font-display text-2xl text-gradient-brand">{String(i + 1).padStart(2, "0")}</span>
-                  <div>
-                    <h4 className="font-semibold">{step.t}</h4>
-                    <p className="mt-1 text-sm text-muted-foreground">{step.d}</p>
+          <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-3">
+            {t.services.items.map((s, i) => {
+              const Icon = [Sparkles, TrendingUp, Layers, Code2, Workflow, PhoneCall][i] ?? Target;
+              return (
+                <article
+                  key={s.title}
+                  className="group rounded-3xl border border-white/10 bg-white/5 p-8 backdrop-blur-xl transition-all hover:-translate-y-1 hover:bg-white/10 hover:shadow-elegant"
+                >
+                  <div className="mb-6 inline-flex h-12 w-12 items-center justify-center rounded-2xl bg-gradient-brand text-white">
+                    <Icon className="h-5 w-5" />
                   </div>
-                </li>
-              ))}
-            </ol>
+                  <h3 className="font-display text-xl font-semibold text-white">{s.title}</h3>
+                  <p className="mt-3 text-sm leading-relaxed text-white/70">{s.desc}</p>
+                </article>
+              );
+            })}
           </div>
         </div>
       </section>
 
-      {/* Contacto */}
-      <section id="contacto" className="mx-auto max-w-6xl px-6 pb-24">
-        <div className="relative overflow-hidden rounded-[2rem] border border-border bg-card p-10 text-center shadow-elegant md:p-20">
-          <div className="pointer-events-none absolute inset-0 -z-10 opacity-40" style={{ background: "radial-gradient(circle at 50% 0%, color-mix(in oklab, var(--purple-brand) 30%, transparent), transparent 60%)" }} />
-          <span className="text-xs font-medium uppercase tracking-widest text-muted-foreground">{t.contact.kicker}</span>
-          <h2 className="mx-auto mt-4 max-w-2xl font-display text-4xl font-semibold leading-tight md:text-6xl">
-            {t.contact.title1} <span className="text-gradient-brand">{t.contact.title2}</span>{t.contact.title3}
-          </h2>
-          <p className="mx-auto mt-5 max-w-lg text-muted-foreground">
-            {t.contact.desc}
-          </p>
+      {/* Método — light section with iridescent shape backdrop */}
+      <section id="metodo" className="relative overflow-hidden py-24 md:py-32">
+        <div className="pointer-events-none absolute inset-0 -z-10">
+          <img src={bgMethod} alt="" aria-hidden loading="lazy" className="h-full w-full object-cover opacity-60" />
+          <div className="absolute inset-0" style={{ background: "linear-gradient(180deg, var(--beige) 0%, color-mix(in oklab, var(--beige) 70%, transparent) 40%, color-mix(in oklab, var(--beige) 70%, transparent) 60%, var(--beige) 100%)" }} />
+        </div>
 
-          <a
-            href="mailto:marcos.marbla@sfiner.com"
-            className="mt-10 inline-flex items-center gap-3 rounded-full bg-gradient-brand px-7 py-4 text-base font-medium text-white shadow-elegant transition-transform hover:scale-[1.02]"
-          >
-            <Mail className="h-4 w-4" />
-            marcos.marbla@sfiner.com
-          </a>
+        <div className="mx-auto max-w-6xl px-6">
+          <div className="rounded-[2rem] border border-border bg-card/80 p-10 shadow-soft backdrop-blur-xl md:p-16">
+            <div className="grid gap-12 md:grid-cols-2">
+              <div>
+                <span className="text-xs font-medium uppercase tracking-widest text-muted-foreground">{t.method.kicker}</span>
+                <h2 className="mt-3 font-display text-4xl font-semibold md:text-5xl">
+                  {t.method.title1} <span className="text-gradient-brand">{t.method.title2}</span>
+                </h2>
+                <p className="mt-6 text-muted-foreground">
+                  {t.method.desc}
+                </p>
+              </div>
+              <ol className="space-y-6">
+                {t.method.steps.map((step, i) => (
+                  <li key={step.t} className="flex gap-5 border-b border-border pb-5 last:border-0">
+                    <span className="font-display text-2xl text-gradient-brand">{String(i + 1).padStart(2, "0")}</span>
+                    <div>
+                      <h4 className="font-semibold">{step.t}</h4>
+                      <p className="mt-1 text-sm text-muted-foreground">{step.d}</p>
+                    </div>
+                  </li>
+                ))}
+              </ol>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Contacto — dark ocean ripple */}
+      <section id="contacto" className="relative overflow-hidden py-24 md:py-32">
+        <div className="pointer-events-none absolute inset-0 -z-10">
+          <img src={bgContact} alt="" aria-hidden loading="lazy" className="h-full w-full object-cover" />
+          <div className="absolute inset-0" style={{ background: "linear-gradient(180deg, rgba(8,4,28,0.85), rgba(20,8,50,0.78) 50%, rgba(8,4,28,0.92))" }} />
+        </div>
+
+        <div className="mx-auto max-w-6xl px-6">
+          <div className="relative overflow-hidden rounded-[2rem] border border-white/10 bg-white/5 p-10 text-center shadow-elegant backdrop-blur-2xl md:p-20">
+            <span className="text-xs font-medium uppercase tracking-widest text-white/60">{t.contact.kicker}</span>
+            <h2 className="mx-auto mt-4 max-w-2xl font-display text-4xl font-semibold leading-tight text-white md:text-6xl">
+              {t.contact.title1} <span className="text-gradient-brand">{t.contact.title2}</span>{t.contact.title3}
+            </h2>
+            <p className="mx-auto mt-5 max-w-lg text-white/70">
+              {t.contact.desc}
+            </p>
+
+            <a
+              href="mailto:marcos.marbla@sfiner.com"
+              className="mt-10 inline-flex items-center gap-3 rounded-full bg-gradient-brand px-7 py-4 text-base font-medium text-white shadow-elegant transition-transform hover:scale-[1.02]"
+            >
+              <Mail className="h-4 w-4" />
+              marcos.marbla@sfiner.com
+            </a>
+          </div>
         </div>
       </section>
 
       {/* Footer */}
-      <footer className="border-t border-border">
+      <footer className="border-t border-border bg-background">
         <div className="mx-auto flex max-w-6xl flex-col items-center justify-between gap-4 px-6 py-8 text-sm text-muted-foreground md:flex-row">
           <div className="font-display text-lg font-semibold">
             <span className="text-gradient-brand">sfiner</span>
