@@ -3,6 +3,10 @@ import { ArrowUpRight, Mail, Sparkles, TrendingUp, Layers, Target, Globe, Check,
 import { useEffect, useState } from "react";
 import { z } from "zod";
 import logoAsset from "../assets/favicon.png.asset.json";
+import bgHero from "../assets/bg-hero.jpg";
+import bgServices from "../assets/bg-services.jpg";
+import bgMethod from "../assets/bg-method.jpg";
+import bgContact from "../assets/bg-contact.jpg";
 
 const SEO = {
   es: {
