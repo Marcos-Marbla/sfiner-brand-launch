@@ -64,10 +64,14 @@ const translations = {
       kicker: "Servicios",
       title1: "Todo lo que tu marca necesita para",
       title2: "escalar de verdad.",
+      intro: "Somos tu growth partner: combinamos estrategia de marca y performance con tecnología — webs a medida, automatizaciones y asistentes de llamadas con IA — para que tu negocio escale sin fricción.",
       items: [
+        { title: "Growth Partner", desc: "Estrategia y ejecución end-to-end para escalar tu marca ecommerce. Foco en rentabilidad, marca y crecimiento sostenido." },
         { title: "Performance Marketing", desc: "Campañas en Meta, TikTok y Google diseñadas para escalar con rentabilidad real, no vanity metrics." },
         { title: "Branding & Identidad", desc: "Construimos la imagen consolidada que diferencia tu marca y la posiciona como referente de su categoría." },
-        { title: "CRO & Estrategia", desc: "Optimizamos tu tienda, embudos y comunicación para convertir cada visita en una oportunidad de marca." },
+        { title: "Diseño Web & CRO", desc: "Diseñamos y desarrollamos webs rápidas, elegantes y optimizadas para convertir cada visita en una oportunidad de marca." },
+        { title: "Automatización de Servicios", desc: "Conectamos tus herramientas y automatizamos procesos comerciales, operativos y de marketing para que tu equipo escale sin contratar más." },
+        { title: "Asistentes de Llamadas IA", desc: "Implementamos asistentes de voz con IA que atienden, cualifican y agendan 24/7 con la voz y el tono de tu marca." },
       ],
     },
     method: {
