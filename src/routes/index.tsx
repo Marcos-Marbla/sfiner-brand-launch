@@ -243,7 +243,7 @@ function Index() {
       {/* Hero */}
       <section id="top" className="relative overflow-hidden">
         {/* Background image */}
-        <div className="pointer-events-none absolute inset-0 -z-10">
+        <div className="pointer-events-none absolute inset-0">
           <img
             src={bgHero}
             alt=""
@@ -298,7 +298,7 @@ function Index() {
 
       {/* Services — dark ocean section */}
       <section id="servicios" className="relative overflow-hidden py-24 md:py-32">
-        <div className="pointer-events-none absolute inset-0 -z-10">
+        <div className="pointer-events-none absolute inset-0">
           <img src={bgServices} alt="" aria-hidden loading="lazy" className="h-full w-full object-cover" />
           <div className="absolute inset-0" style={{ background: "linear-gradient(180deg, rgba(10,5,30,0.92), rgba(20,10,50,0.86) 50%, rgba(10,5,30,0.95))" }} />
         </div>
@@ -334,7 +334,7 @@ function Index() {
 
       {/* Método — light section with iridescent shape backdrop */}
       <section id="metodo" className="relative overflow-hidden py-24 md:py-32">
-        <div className="pointer-events-none absolute inset-0 -z-10">
+        <div className="pointer-events-none absolute inset-0">
           <img src={bgMethod} alt="" aria-hidden loading="lazy" className="h-full w-full object-cover opacity-60" />
           <div className="absolute inset-0" style={{ background: "linear-gradient(180deg, var(--beige) 0%, color-mix(in oklab, var(--beige) 70%, transparent) 40%, color-mix(in oklab, var(--beige) 70%, transparent) 60%, var(--beige) 100%)" }} />
         </div>
@@ -369,7 +369,7 @@ function Index() {
 
       {/* Contacto — dark ocean ripple */}
       <section id="contacto" className="relative overflow-hidden py-24 md:py-32">
-        <div className="pointer-events-none absolute inset-0 -z-10">
+        <div className="pointer-events-none absolute inset-0">
           <img src={bgContact} alt="" aria-hidden loading="lazy" className="h-full w-full object-cover" />
           <div className="absolute inset-0" style={{ background: "linear-gradient(180deg, rgba(8,4,28,0.85), rgba(20,8,50,0.78) 50%, rgba(8,4,28,0.92))" }} />
         </div>
