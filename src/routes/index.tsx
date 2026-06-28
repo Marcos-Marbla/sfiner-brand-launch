@@ -1,5 +1,5 @@
 import { createFileRoute } from "@tanstack/react-router";
-import { ArrowUpRight, Mail, Sparkles, TrendingUp, Layers, Target, Globe, Check } from "lucide-react";
+import { ArrowUpRight, Mail, Sparkles, TrendingUp, Layers, Target, Globe, Check, Code2, Workflow, PhoneCall } from "lucide-react";
 import { useEffect, useState } from "react";
 import { z } from "zod";
 import logoAsset from "../assets/favicon.png.asset.json";
