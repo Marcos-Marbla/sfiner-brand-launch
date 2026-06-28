@@ -257,11 +257,11 @@ function Index() {
         <div className="relative z-10 mx-auto max-w-6xl px-6 pb-24 pt-12 md:pt-20">
           <div className="mx-auto flex max-w-3xl flex-col items-center text-center">
             <img
-              src={logoAsset.url}
+              src={logoMark}
               alt="Logo de Sfiner"
-              style={{ mixBlendMode: "multiply" }}
               className="mb-6 h-28 w-28 object-contain drop-shadow-[0_10px_30px_rgba(120,40,180,0.25)] md:h-36 md:w-36"
             />
+
             <h1 className="font-display text-7xl font-semibold leading-none tracking-tight md:text-9xl">
               <span className="text-gradient-brand">Sfiner</span>
             </h1>
