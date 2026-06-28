@@ -2,7 +2,7 @@ import { createFileRoute } from "@tanstack/react-router";
 import { ArrowUpRight, Mail, Sparkles, TrendingUp, Layers, Target, Globe, Check, Code2, Workflow, PhoneCall } from "lucide-react";
 import { useEffect, useState } from "react";
 import { z } from "zod";
-import logoAsset from "../assets/favicon.png.asset.json";
+import logoMark from "../assets/logo-mark.png";
 import bgHero from "../assets/bg-hero.jpg";
 import bgServices from "../assets/bg-services.jpg";
 import bgMethod from "../assets/bg-method.jpg";
@@ -243,7 +243,7 @@ function Index() {
       {/* Hero */}
       <section id="top" className="relative overflow-hidden">
         {/* Background image */}
-        <div className="pointer-events-none absolute inset-0 -z-10">
+        <div className="pointer-events-none absolute inset-0">
           <img
             src={bgHero}
             alt=""
@@ -254,14 +254,14 @@ function Index() {
           <div className="absolute inset-0" style={{ background: "linear-gradient(180deg, color-mix(in oklab, var(--beige) 78%, transparent) 0%, color-mix(in oklab, var(--beige) 92%, transparent) 60%, var(--beige) 100%)" }} />
         </div>
 
-        <div className="mx-auto max-w-6xl px-6 pb-24 pt-12 md:pt-20">
+        <div className="relative z-10 mx-auto max-w-6xl px-6 pb-24 pt-12 md:pt-20">
           <div className="mx-auto flex max-w-3xl flex-col items-center text-center">
             <img
-              src={logoAsset.url}
+              src={logoMark}
               alt="Logo de Sfiner"
-              style={{ mixBlendMode: "multiply" }}
               className="mb-6 h-28 w-28 object-contain drop-shadow-[0_10px_30px_rgba(120,40,180,0.25)] md:h-36 md:w-36"
             />
+
             <h1 className="font-display text-7xl font-semibold leading-none tracking-tight md:text-9xl">
               <span className="text-gradient-brand">Sfiner</span>
             </h1>
@@ -298,12 +298,12 @@ function Index() {
 
       {/* Services — dark ocean section */}
       <section id="servicios" className="relative overflow-hidden py-24 md:py-32">
-        <div className="pointer-events-none absolute inset-0 -z-10">
-          <img src={bgServices} alt="" aria-hidden loading="lazy" className="h-full w-full object-cover" />
+        <div className="pointer-events-none absolute inset-0">
+          <img src={bgServices} alt="" aria-hidden className="h-full w-full object-cover" />
           <div className="absolute inset-0" style={{ background: "linear-gradient(180deg, rgba(10,5,30,0.92), rgba(20,10,50,0.86) 50%, rgba(10,5,30,0.95))" }} />
         </div>
 
-        <div className="mx-auto max-w-6xl px-6">
+        <div className="relative z-10 mx-auto max-w-6xl px-6">
           <div className="mb-14 max-w-2xl">
             <span className="text-xs font-medium uppercase tracking-widest text-white/60">{t.services.kicker}</span>
             <h2 className="mt-3 font-display text-4xl font-semibold text-white md:text-5xl">
@@ -334,12 +334,12 @@ function Index() {
 
       {/* Método — light section with iridescent shape backdrop */}
       <section id="metodo" className="relative overflow-hidden py-24 md:py-32">
-        <div className="pointer-events-none absolute inset-0 -z-10">
-          <img src={bgMethod} alt="" aria-hidden loading="lazy" className="h-full w-full object-cover opacity-60" />
+        <div className="pointer-events-none absolute inset-0">
+          <img src={bgMethod} alt="" aria-hidden className="h-full w-full object-cover opacity-60" />
           <div className="absolute inset-0" style={{ background: "linear-gradient(180deg, var(--beige) 0%, color-mix(in oklab, var(--beige) 70%, transparent) 40%, color-mix(in oklab, var(--beige) 70%, transparent) 60%, var(--beige) 100%)" }} />
         </div>
 
-        <div className="mx-auto max-w-6xl px-6">
+        <div className="relative z-10 mx-auto max-w-6xl px-6">
           <div className="rounded-[2rem] border border-border bg-card/80 p-10 shadow-soft backdrop-blur-xl md:p-16">
             <div className="grid gap-12 md:grid-cols-2">
               <div>
@@ -369,12 +369,12 @@ function Index() {
 
       {/* Contacto — dark ocean ripple */}
       <section id="contacto" className="relative overflow-hidden py-24 md:py-32">
-        <div className="pointer-events-none absolute inset-0 -z-10">
-          <img src={bgContact} alt="" aria-hidden loading="lazy" className="h-full w-full object-cover" />
+        <div className="pointer-events-none absolute inset-0">
+          <img src={bgContact} alt="" aria-hidden className="h-full w-full object-cover" />
           <div className="absolute inset-0" style={{ background: "linear-gradient(180deg, rgba(8,4,28,0.85), rgba(20,8,50,0.78) 50%, rgba(8,4,28,0.92))" }} />
         </div>
 
-        <div className="mx-auto max-w-6xl px-6">
+        <div className="relative z-10 mx-auto max-w-6xl px-6">
           <div className="relative overflow-hidden rounded-[2rem] border border-white/10 bg-white/5 p-10 text-center shadow-elegant backdrop-blur-2xl md:p-20">
             <span className="text-xs font-medium uppercase tracking-widest text-white/60">{t.contact.kicker}</span>
             <h2 className="mx-auto mt-4 max-w-2xl font-display text-4xl font-semibold leading-tight text-white md:text-6xl">
