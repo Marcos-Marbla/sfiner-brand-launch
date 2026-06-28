@@ -290,11 +290,12 @@ function Index() {
           <h2 className="mt-3 font-display text-4xl font-semibold md:text-5xl">
             {t.services.title1} <span className="text-gradient-brand">{t.services.title2}</span>
           </h2>
+          <p className="mt-5 text-muted-foreground">{t.services.intro}</p>
         </div>
 
-        <div className="grid gap-6 md:grid-cols-3">
+        <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-3">
           {t.services.items.map((s, i) => {
-            const Icon = [TrendingUp, Layers, Target][i];
+            const Icon = [Sparkles, TrendingUp, Layers, Code2, Workflow, PhoneCall][i] ?? Target;
             return (
               <article key={s.title} className="group rounded-3xl border border-border bg-card p-8 shadow-soft transition-all hover:-translate-y-1 hover:shadow-elegant">
                 <div className="mb-6 inline-flex h-12 w-12 items-center justify-center rounded-2xl bg-gradient-brand text-white">
