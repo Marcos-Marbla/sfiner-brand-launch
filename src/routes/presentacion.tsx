@@ -2,6 +2,8 @@ import { createFileRoute } from "@tanstack/react-router";
 import { useEffect, useRef, useState } from "react";
 import { Play, Pause, Maximize2, Volume2, VolumeX } from "lucide-react";
 import logoMark from "../assets/logo-mark.png";
+import { trackPixel } from "../lib/meta-pixel";
+
 
 export const Route = createFileRoute("/presentacion")({
   head: () => ({
@@ -54,8 +56,11 @@ function LockedVideo() {
   const toggle = () => {
     const v = videoRef.current;
     if (!v) return;
-    if (v.paused) { v.play(); setPlaying(true); }
-    else { v.pause(); setPlaying(false); }
+    if (v.paused) {
+      v.play();
+      setPlaying(true);
+      trackPixel("ViewContent", { content_name: "VSL Sfiner", content_type: "video" });
+    } else { v.pause(); setPlaying(false); }
   };
   const toggleMute = () => {
     const v = videoRef.current;
@@ -138,6 +143,7 @@ function LockedVideo() {
 
 function Presentacion() {
   const scrollToCalendly = () => {
+    trackPixel("Lead", { content_name: "Agenda Demo CTA" });
     document.getElementById("agenda")?.scrollIntoView({ behavior: "smooth" });
   };
 
