@@ -56,8 +56,11 @@ function LockedVideo() {
   const toggle = () => {
     const v = videoRef.current;
     if (!v) return;
-    if (v.paused) { v.play(); setPlaying(true); }
-    else { v.pause(); setPlaying(false); }
+    if (v.paused) {
+      v.play();
+      setPlaying(true);
+      trackPixel("ViewContent", { content_name: "VSL Sfiner", content_type: "video" });
+    } else { v.pause(); setPlaying(false); }
   };
   const toggleMute = () => {
     const v = videoRef.current;
