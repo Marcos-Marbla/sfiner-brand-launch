@@ -143,6 +143,7 @@ function LockedVideo() {
 
 function Presentacion() {
   const scrollToCalendly = () => {
+    trackPixel("Lead", { content_name: "Agenda Demo CTA" });
     document.getElementById("agenda")?.scrollIntoView({ behavior: "smooth" });
   };
 
