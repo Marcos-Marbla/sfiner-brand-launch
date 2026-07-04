@@ -2,6 +2,8 @@ import { createFileRoute } from "@tanstack/react-router";
 import { useEffect, useRef, useState } from "react";
 import { Play, Pause, Maximize2, Volume2, VolumeX } from "lucide-react";
 import logoMark from "../assets/logo-mark.png";
+import { trackPixel } from "../lib/meta-pixel";
+
 
 export const Route = createFileRoute("/presentacion")({
   head: () => ({
