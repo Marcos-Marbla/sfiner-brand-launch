@@ -172,19 +172,19 @@ function Presentacion() {
           </header>
         </div>
 
-        <div className="mx-auto max-w-4xl px-6 pt-16 pb-24 text-center">
+        <div className="mx-auto max-w-4xl px-6 pt-10 pb-10 text-center">
           <h1 className="font-display text-4xl font-semibold leading-tight tracking-tight md:text-5xl lg:text-6xl">
             La fórmula garantizada de 3 pasos para escalar
             <br className="hidden md:block" />
             una marca de cosmética a <span className="text-gradient-brand">7/8 cifras</span> en 2026
           </h1>
-          <p className="mt-6 text-sm uppercase tracking-[0.25em] text-white/60">
+          <p className="mt-4 text-sm uppercase tracking-[0.25em] text-white/60">
             Sin depender de Facebook Ads, agencias o influencers
           </p>
         </div>
 
         {/* Video sobresaliendo del hero */}
-        <div className="mx-auto -mb-40 max-w-4xl px-6">
+        <div className="mx-auto -mb-44 max-w-4xl px-6">
           <LockedVideo />
         </div>
       </section>
