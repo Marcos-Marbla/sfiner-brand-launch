@@ -195,12 +195,15 @@ function Presentacion() {
           <h2 className="font-display text-3xl font-semibold tracking-tight md:text-4xl">
             Reserva una hora abajo
           </h2>
-          <div className="mt-10 overflow-hidden rounded-2xl border border-border bg-ink text-primary-foreground shadow-elegant">
-            <div className="flex min-h-[520px] items-center justify-center p-8 text-center text-sm uppercase tracking-[0.25em] text-white/60">
-              {/* Sustituye este bloque por el embed de Calendly */}
-              Añadir evento de Calendly aquí
-            </div>
+          <div className="mt-10 overflow-hidden rounded-2xl border border-border bg-ink shadow-elegant">
+            <iframe
+              src="https://calendly.com/marcos-marbla-sfiner/30min?hide_gdpr_banner=1&background_color=0b0b0f&text_color=ffffff&primary_color=a855f7"
+              title="Reserva una llamada con Sfiner"
+              className="h-[720px] w-full border-0"
+              loading="lazy"
+            />
           </div>
+
         </div>
       </section>
 
