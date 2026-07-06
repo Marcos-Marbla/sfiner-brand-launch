@@ -184,20 +184,20 @@ function Presentacion() {
         </div>
 
         {/* Video sobresaliendo del hero */}
-        <div className="mx-auto -mb-44 max-w-4xl px-6">
+        <div className="mx-auto -mb-36 max-w-4xl px-6">
           <LockedVideo />
         </div>
       </section>
 
       {/* CALENDLY */}
-      <section id="agenda" className="bg-background pt-56 pb-24">
+      <section id="agenda" className="bg-background pt-72 pb-24">
         <div className="mx-auto max-w-4xl px-6 text-center">
           <h2 className="font-display text-3xl font-semibold tracking-tight md:text-4xl">
             Reserva una hora abajo
           </h2>
-          <div className="mt-10 overflow-hidden rounded-2xl border border-border bg-ink shadow-elegant">
+          <div className="mt-10 overflow-hidden rounded-2xl border border-border bg-white shadow-soft">
             <iframe
-              src="https://calendly.com/marcos-marbla-sfiner/30min?hide_gdpr_banner=1&background_color=0b0b0f&text_color=ffffff&primary_color=a855f7"
+              src="https://calendly.com/marcos-marbla-sfiner/30min?hide_gdpr_banner=1&background_color=ffffff&text_color=0b0b0f&primary_color=a855f7"
               title="Reserva una llamada con Sfiner"
               className="h-[720px] w-full border-0"
               loading="lazy"
