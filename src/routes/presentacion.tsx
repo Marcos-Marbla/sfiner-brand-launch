@@ -207,24 +207,6 @@ function Presentacion() {
         </div>
       </section>
 
-      {/* LOGOS */}
-      <section className="border-t border-border bg-background py-16">
-        <div className="mx-auto max-w-5xl px-6 text-center">
-          <p className="text-xs uppercase tracking-[0.3em] text-muted-foreground">
-            El growth partner de confianza para
-          </p>
-          <div className="mt-8 flex flex-wrap items-center justify-center gap-x-10 gap-y-6">
-            {brands.map((b) => (
-              <span
-                key={b}
-                className="flex h-14 w-14 items-center justify-center rounded-full bg-ink font-display text-xs font-semibold text-primary-foreground"
-              >
-                {b}
-              </span>
-            ))}
-          </div>
-        </div>
-      </section>
 
       {/* SOBRE / QUIEN SOMOS */}
       <section id="sobre" className="bg-background py-24">
