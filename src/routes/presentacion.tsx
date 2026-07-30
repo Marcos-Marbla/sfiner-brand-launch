@@ -170,25 +170,25 @@ function Presentacion() {
           </header>
         </div>
 
-        <div className="mx-auto max-w-4xl px-6 pt-10 pb-16 text-center">
-          <h1 className="font-display text-4xl font-semibold leading-tight tracking-tight md:text-5xl lg:text-6xl">
-            La fórmula garantizada de 3 pasos para escalar
-            <br className="hidden md:block" />
+        <div className="mx-auto max-w-4xl px-6 pt-8 pb-12 text-center sm:pt-10 sm:pb-16 md:pt-14 md:pb-24 lg:pb-32">
+          <h1 className="font-display text-3xl font-semibold leading-tight tracking-tight sm:text-4xl md:text-5xl lg:text-6xl">
+            La fórmula garantizada de 3 pasos para escalar{" "}
+            <br className="md:hidden" />
             una marca de Water Purifiers a <span className="text-gradient-brand">7/8 cifras</span> en 2026
           </h1>
-          <p className="mt-4 text-sm uppercase tracking-[0.25em] text-white/60">
+          <p className="mt-4 text-xs uppercase tracking-[0.2em] text-white/60 sm:text-sm sm:tracking-[0.25em]">
             Sin depender de Facebook Ads, agencias o influencers
           </p>
         </div>
 
-        {/* Video sobresaliendo del hero */}
-        <div className="mx-auto -mb-28 max-w-4xl px-6">
+        {/* Video sobresaliendo del hero hacia la siguiente sección */}
+        <div className="relative z-10 mx-auto max-w-4xl px-6 translate-y-10 sm:translate-y-14 md:translate-y-20 lg:translate-y-24">
           <LockedVideo />
         </div>
       </section>
 
       {/* CALENDLY */}
-      <section id="agenda" className="bg-background pt-72 pb-24">
+      <section id="agenda" className="bg-background pt-32 sm:pt-36 md:pt-48 lg:pt-56 pb-24">
         <div className="mx-auto max-w-4xl px-6 text-center">
           <h2 className="font-display text-3xl font-semibold tracking-tight md:text-4xl">
             Reserva una hora abajo
