@@ -85,8 +85,7 @@ function LockedVideo() {
         onContextMenu={(e) => e.preventDefault()}
         controlsList="nodownload noplaybackrate nofullscreen"
         disablePictureInPicture
-        // Reemplaza el src por tu video (puedes subirlo a /public y usar "/tu-video.mp4")
-        src="/video.mp4"
+        src={vslAsset.url}
         poster=""
       />
       {/* Overlay para bloquear el clic derecho / evitar interacción con controles nativos */}
