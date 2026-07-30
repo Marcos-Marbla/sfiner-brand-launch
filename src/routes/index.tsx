@@ -57,11 +57,11 @@ const translations = {
     nav: { services: "Servicios", method: "Método", contact: "Contacto", cta: "Hablemos" },
     hero: {
       badge: "Growth Partner para ecommerce",
-      slogan1: "En un océano de marcas,",
-      slogan2: "nadan los tiburones.",
+      slogan1: "Una fórmula única",
+      slogan2: "que hace crecer negocios.",
       tagline: "The fin behind your momentum.",
-      desc: "Convertimos marcas ecommerce en depredadores de su categoría: más ventas, más marca, más mordida en cada lanzamiento.",
-      ctaPrimary: "Empezar a cazar",
+      desc: "Hemos desarrollado una fórmula propia de crecimiento 360º — performance, marca y tecnología — que convierte marcas ecommerce en negocios rentables y consolidados.",
+      ctaPrimary: "Descubre la fórmula",
       ctaSecondary: "Ver servicios",
     },
     services: {
