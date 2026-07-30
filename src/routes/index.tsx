@@ -103,11 +103,11 @@ const translations = {
     nav: { services: "Services", method: "Method", contact: "Contact", cta: "Let's talk" },
     hero: {
       badge: "Growth Partner for ecommerce",
-      slogan1: "In an ocean of brands,",
-      slogan2: "sharks are the ones swimming.",
+      slogan1: "One unique formula",
+      slogan2: "that grows businesses.",
       tagline: "The fin behind your momentum.",
-      desc: "We turn ecommerce brands into predators of their category: more sales, more brand, more bite in every launch.",
-      ctaPrimary: "Start hunting",
+      desc: "We built our own 360º growth formula — performance, brand and technology — that turns ecommerce brands into profitable, consolidated businesses.",
+      ctaPrimary: "Discover the formula",
       ctaSecondary: "See services",
     },
     services: {
