@@ -170,11 +170,11 @@ function Presentacion() {
           </header>
         </div>
 
-        <div className="mx-auto max-w-4xl px-6 pt-10 pb-10 text-center">
+        <div className="mx-auto max-w-4xl px-6 pt-10 pb-16 text-center">
           <h1 className="font-display text-4xl font-semibold leading-tight tracking-tight md:text-5xl lg:text-6xl">
             La fórmula garantizada de 3 pasos para escalar
             <br className="hidden md:block" />
-            una marca de cosmética a <span className="text-gradient-brand">7/8 cifras</span> en 2026
+            una marca de Water Purifiers a <span className="text-gradient-brand">7/8 cifras</span> en 2026
           </h1>
           <p className="mt-4 text-sm uppercase tracking-[0.25em] text-white/60">
             Sin depender de Facebook Ads, agencias o influencers
@@ -182,7 +182,7 @@ function Presentacion() {
         </div>
 
         {/* Video sobresaliendo del hero */}
-        <div className="mx-auto -mb-36 max-w-4xl px-6">
+        <div className="mx-auto -mb-28 max-w-4xl px-6">
           <LockedVideo />
         </div>
       </section>
@@ -226,7 +226,7 @@ function Presentacion() {
               </h3>
               <p className="mt-6 text-base leading-relaxed text-muted-foreground">
                 En Sfiner hemos desarrollado una fórmula exclusiva de crecimiento 360º que combina
-                performance, branding y CRO para escalar marcas de cosmética a 7 y 8 cifras.
+                performance, branding y CRO para escalar marcas de Water Purifiers a 7 y 8 cifras.
               </p>
               <p className="mt-4 text-base leading-relaxed text-muted-foreground">
                 No se trata de más tráfico ni de más presupuesto en ads. Se trata de un sistema
@@ -241,19 +241,6 @@ function Presentacion() {
               </button>
             </div>
           </div>
-        </div>
-      </section>
-
-      {/* TESTIMONIO */}
-      <section className="bg-background py-20">
-        <div className="mx-auto max-w-3xl px-6 text-center">
-          <p className="font-display text-xl italic leading-relaxed text-foreground md:text-2xl">
-            “Sfiner cambió por completo cómo entendemos nuestro crecimiento. En 6 meses pasamos
-            de estancados a un canal directo rentable y escalable.”
-          </p>
-          <p className="mt-6 text-xs uppercase tracking-[0.25em] text-muted-foreground">
-            Pedro Rodríguez · VP of Marketing
-          </p>
         </div>
       </section>
 
