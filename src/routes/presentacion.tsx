@@ -188,7 +188,7 @@ function Presentacion() {
       </section>
 
       {/* CALENDLY */}
-      <section id="agenda" className="bg-background pt-28 sm:pt-36 md:pt-48 lg:pt-56 pb-24">
+      <section id="agenda" className="bg-background pt-32 sm:pt-36 md:pt-48 lg:pt-56 pb-24">
         <div className="mx-auto max-w-4xl px-6 text-center">
           <h2 className="font-display text-3xl font-semibold tracking-tight md:text-4xl">
             Reserva una hora abajo
