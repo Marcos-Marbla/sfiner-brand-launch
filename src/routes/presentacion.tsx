@@ -147,8 +147,6 @@ function Presentacion() {
     document.getElementById("agenda")?.scrollIntoView({ behavior: "smooth" });
   };
 
-  const brands = ["LUNA", "AURA", "NOVA", "KORA", "ELIA", "VESTA"];
-
   return (
     <div className="min-h-screen bg-background text-foreground">
       {/* HERO oscuro */}
@@ -207,30 +205,12 @@ function Presentacion() {
         </div>
       </section>
 
-      {/* LOGOS */}
-      <section className="border-t border-border bg-background py-16">
-        <div className="mx-auto max-w-5xl px-6 text-center">
-          <p className="text-xs uppercase tracking-[0.3em] text-muted-foreground">
-            El growth partner de confianza para
-          </p>
-          <div className="mt-8 flex flex-wrap items-center justify-center gap-x-10 gap-y-6">
-            {brands.map((b) => (
-              <span
-                key={b}
-                className="flex h-14 w-14 items-center justify-center rounded-full bg-ink font-display text-xs font-semibold text-primary-foreground"
-              >
-                {b}
-              </span>
-            ))}
-          </div>
-        </div>
-      </section>
 
-      {/* SOBRE / QUIEN SOMOS */}
+      {/* SOBRE / LA FÓRMULA */}
       <section id="sobre" className="bg-background py-24">
         <div className="mx-auto max-w-6xl px-6">
           <h2 className="text-center font-display text-3xl font-semibold tracking-tight md:text-4xl">
-            Quiénes somos
+            Una estrategia única y ganadora
           </h2>
           <div className="mt-14 grid gap-10 md:grid-cols-2 md:items-center">
             <div className="relative aspect-[4/5] overflow-hidden rounded-2xl bg-ink shadow-elegant">
@@ -240,18 +220,18 @@ function Presentacion() {
               </div>
             </div>
             <div>
-              <p className="text-xs uppercase tracking-[0.3em] text-muted-foreground">Sobre ti</p>
+              <p className="text-xs uppercase tracking-[0.3em] text-muted-foreground">Sobre nosotros</p>
               <h3 className="mt-3 font-display text-2xl font-semibold tracking-tight md:text-3xl">
-                El fin detrás de tu momentum.
+                Estrategia, ejecución y tecnología en un solo equipo.
               </h3>
               <p className="mt-6 text-base leading-relaxed text-muted-foreground">
-                No somos una agencia más. Actuamos como tu growth partner: nuestro enfoque está
-                orientado a resultados, con una fórmula de crecimiento 360º basada en performance,
-                branding y CRO, no en fijar precios por servicios sueltos.
+                En Sfiner hemos desarrollado una fórmula exclusiva de crecimiento 360º que combina
+                performance, branding y CRO para escalar marcas de cosmética a 7 y 8 cifras.
               </p>
               <p className="mt-4 text-base leading-relaxed text-muted-foreground">
-                Combinamos estrategia, tecnología (webs a medida, automatizaciones y asistentes de
-                llamadas con IA) y ejecución diaria para escalar marcas de cosmética a 7 y 8 cifras.
+                No se trata de más tráfico ni de más presupuesto en ads. Se trata de un sistema
+                probado que alinea tu marca, tu funnel y tus operaciones para convertir cada euro
+                invertido en resultados reales y sostenibles.
               </p>
               <button
                 onClick={scrollToCalendly}
