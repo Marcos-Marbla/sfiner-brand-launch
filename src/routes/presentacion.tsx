@@ -2,6 +2,7 @@ import { createFileRoute } from "@tanstack/react-router";
 import { useEffect, useRef, useState } from "react";
 import { Play, Pause, Maximize2, Volume2, VolumeX } from "lucide-react";
 import logoMark from "../assets/logo-mark.png";
+import vslAsset from "../assets/sfiner-vsl.mp4.asset.json";
 import { trackPixel } from "../lib/meta-pixel";
 
 
