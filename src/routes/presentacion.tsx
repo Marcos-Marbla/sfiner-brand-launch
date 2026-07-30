@@ -172,7 +172,7 @@ function Presentacion() {
 
         <div className="mx-auto max-w-4xl px-6 pt-8 pb-12 text-center sm:pt-10 sm:pb-16 md:pt-14 md:pb-24 lg:pb-32">
           <h1 className="font-display text-3xl font-semibold leading-tight tracking-tight sm:text-4xl md:text-5xl lg:text-6xl">
-            La fórmula garantizada de 3 pasos para escalar
+            La fórmula garantizada de 3 pasos para escalar{" "}
             <br className="hidden md:block" />
             una marca de Water Purifiers a <span className="text-gradient-brand">7/8 cifras</span> en 2026
           </h1>
