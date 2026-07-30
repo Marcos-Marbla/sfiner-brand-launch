@@ -147,8 +147,6 @@ function Presentacion() {
     document.getElementById("agenda")?.scrollIntoView({ behavior: "smooth" });
   };
 
-  const brands = ["LUNA", "AURA", "NOVA", "KORA", "ELIA", "VESTA"];
-
   return (
     <div className="min-h-screen bg-background text-foreground">
       {/* HERO oscuro */}
